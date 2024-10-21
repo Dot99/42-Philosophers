@@ -1,0 +1,91 @@
+\doxysection{philo/includes/philo.h File Reference}
+\hypertarget{philo_8h}{}\label{philo_8h}\index{philo/includes/philo.h@{philo/includes/philo.h}}
+
+
+Philosophers Header.  
+
+
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs__args}{s\+\_\+args}}
+\begin{DoxyCompactList}\small\item\em Struct of arguments. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structs__philo}{s\+\_\+philo}}
+\begin{DoxyCompactList}\small\item\em Philosophers Struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gad4b275dfea6ea4f4a4f088b4b1b4008f}{WRONG\+\_\+\+ARG}}~"{}Invalid Arguments"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga38df2209b5743705970943dfd46ee11d}{MTX\+\_\+\+ERROR}}~"{}Mutex Error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga288833146bf51c8b2e1c9288b26f7202}{MLC\+\_\+\+ERROR}}~"{}Malloc Error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gaf7370d9542e6df01dc43ea3ccf173631}{THR\+\_\+\+ERROR}}~"{}Thread error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga6a4c63572a9f37ef94dcec18e40157b3}{THR\+\_\+\+JOIN}}~"{}Thread join error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga93182e924cb059b7c3639d5bf3b12c9e}{FORK}}~"{}has taken the fork\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga168db05df29f4ea8393be04e6168e236}{EAT}}~"{}is eating\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga44e89d523436fcbbf2c56e4fb335d509}{SLEEP}}~"{}is sleeping\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gab3fd8705bf275fd3f080dc354056ff3b}{THINK}}~"{}is thinking\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga75f9d93fb4725616678f9fee65f44f50}{DEATH}}~"{}died\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga941a506727ea6a3c5a9687dad74ee100}{DEFORK}}~"{}has released the fork\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gad72dbcf6d0153db1b8d8a58001feed83}{DEBUG}}~false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structs__args}{s\+\_\+args}} \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}}
+\begin{DoxyCompactList}\small\item\em Struct of arguments. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structs__philo}{s\+\_\+philo}} \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}}
+\begin{DoxyCompactList}\small\item\em Philosophers Struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__mandatory_ga8e1df43327c1132d2c8bf6afa4e48a82}{valid\+\_\+args}} (int ac, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}av)
+\begin{DoxyCompactList}\small\item\em Validates arguments. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_ga105820adca68804c4df1b8989d812ded}{init\+\_\+args}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}av)
+\begin{DoxyCompactList}\small\item\em Main function to initialize arguments. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_ga9fb398b14cf8d08b053bbd77ee7dfc7f}{start}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}fork, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Starts the threads. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_gadbe736fc8495420ed46113b5b29799b0}{is\+\_\+philo\+\_\+dead}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, int \texorpdfstring{$\ast$}{*}philo\+\_\+fed)
+\begin{DoxyCompactList}\small\item\em Checks if philo is dead. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga6e3524a78002ecc721e4bfc2fd3f87ff}{pick\+\_\+forks}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Pick up the forks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gabdb4a71338e67e0b044554de32baf2ff}{lay\+\_\+forks}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Lay down forks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga8d668d2b57af1948ac8af0b63e0786d3}{handler}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, char \texorpdfstring{$\ast$}{*}event)
+\begin{DoxyCompactList}\small\item\em Handles the printing of the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga777b77c13b750a325943cb4c3bd2fecc}{all\+\_\+fed}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Prints message that all philo are done eating. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_gab358597df77415f9aaa2d8e35096d683}{loop}} (void \texorpdfstring{$\ast$}{*}\+\_\+philo)
+\begin{DoxyCompactList}\small\item\em Main loop of the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gaa146848b68cc8a8387b90ece584b7c30}{free\+\_\+all}} (pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks, \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Free everything. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga8b69de8d014eeffdfadc9cfe281ade0c}{dead}} (pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks, \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, char \texorpdfstring{$\ast$}{*}error)
+\begin{DoxyCompactList}\small\item\em Function to end the program. \end{DoxyCompactList}\item 
+pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_ga7ee147accbe8af4b7e4b9f2dabc1f22d}{init\+\_\+forks}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Initialize each fork. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_ga7713bac112dff0a18a9c764d665c33b8}{init\+\_\+philos}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks)
+\begin{DoxyCompactList}\small\item\em Initialize philos. \end{DoxyCompactList}\item 
+suseconds\+\_\+t \mbox{\hyperlink{group__mandatory_gaeae305baf30d1299001512462e4e8d5e}{get\+\_\+time}} (void)
+\begin{DoxyCompactList}\small\item\em Get the time object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Philosophers Header. 
+

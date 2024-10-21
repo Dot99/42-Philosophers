@@ -1,0 +1,110 @@
+\doxysection{s\+\_\+philo Struct Reference}
+\hypertarget{structs__philo}{}\label{structs__philo}\index{s\_philo@{s\_philo}}
+
+
+Philosophers Struct.  
+
+
+
+
+{\ttfamily \#include $<$philo.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structs__philo_ac27dc36a15510a198e59949b4831afa8}{nbr\+\_\+philo}}
+\item 
+int \mbox{\hyperlink{structs__philo_aa81a8fdcf5fa8b6d40bfcc9101592f50}{num\+\_\+eat}}
+\item 
+suseconds\+\_\+t \mbox{\hyperlink{structs__philo_a3633341ac6b3243e5277d6b8d13b1d2e}{start}}
+\item 
+suseconds\+\_\+t \mbox{\hyperlink{structs__philo_a9883fbfb4edab75a30b20ac349bdb323}{last\+\_\+meal}}
+\item 
+pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structs__philo_a386ebbb05bb3a38ff0519cf017228634}{l\+\_\+fork}}
+\item 
+pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structs__philo_a2e060fc5b4ee02a8ab1781dbfe485803}{r\+\_\+fork}}
+\item 
+pthread\+\_\+t \mbox{\hyperlink{structs__philo_a92ae86dd86fe0c6be01346d96514d4b3}{t\+\_\+id}}
+\item 
+\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structs__philo_a4b8e500d01d278938821ae5cceb0e0bd}{args}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Philosophers Struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nbr\+\_\+philo} & Number of the philo \\
+\hline
+{\em num\+\_\+eat} & Number of meals eated by philo \\
+\hline
+{\em start} & Start time of each philo \\
+\hline
+{\em last\+\_\+meal} & Last time a philo has eaten \\
+\hline
+{\em l\+\_\+fork} & Left Fork Mutex \\
+\hline
+{\em r\+\_\+fork} & Right Fork Mutex \\
+\hline
+{\em t\+\_\+id} & Thread Id of Philo \\
+\hline
+{\em args} & Struct of args \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structs__philo_a4b8e500d01d278938821ae5cceb0e0bd}\index{s\_philo@{s\_philo}!args@{args}}
+\index{args@{args}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{args}{args}}
+{\footnotesize\ttfamily \label{structs__philo_a4b8e500d01d278938821ae5cceb0e0bd} 
+\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}}\texorpdfstring{$\ast$}{*} s\+\_\+philo\+::args}
+
+\Hypertarget{structs__philo_a386ebbb05bb3a38ff0519cf017228634}\index{s\_philo@{s\_philo}!l\_fork@{l\_fork}}
+\index{l\_fork@{l\_fork}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{l\_fork}{l\_fork}}
+{\footnotesize\ttfamily \label{structs__philo_a386ebbb05bb3a38ff0519cf017228634} 
+pthread\+\_\+mutex\+\_\+t\texorpdfstring{$\ast$}{*} s\+\_\+philo\+::l\+\_\+fork}
+
+\Hypertarget{structs__philo_a9883fbfb4edab75a30b20ac349bdb323}\index{s\_philo@{s\_philo}!last\_meal@{last\_meal}}
+\index{last\_meal@{last\_meal}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{last\_meal}{last\_meal}}
+{\footnotesize\ttfamily \label{structs__philo_a9883fbfb4edab75a30b20ac349bdb323} 
+suseconds\+\_\+t s\+\_\+philo\+::last\+\_\+meal}
+
+\Hypertarget{structs__philo_ac27dc36a15510a198e59949b4831afa8}\index{s\_philo@{s\_philo}!nbr\_philo@{nbr\_philo}}
+\index{nbr\_philo@{nbr\_philo}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{nbr\_philo}{nbr\_philo}}
+{\footnotesize\ttfamily \label{structs__philo_ac27dc36a15510a198e59949b4831afa8} 
+int s\+\_\+philo\+::nbr\+\_\+philo}
+
+\Hypertarget{structs__philo_aa81a8fdcf5fa8b6d40bfcc9101592f50}\index{s\_philo@{s\_philo}!num\_eat@{num\_eat}}
+\index{num\_eat@{num\_eat}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{num\_eat}{num\_eat}}
+{\footnotesize\ttfamily \label{structs__philo_aa81a8fdcf5fa8b6d40bfcc9101592f50} 
+int s\+\_\+philo\+::num\+\_\+eat}
+
+\Hypertarget{structs__philo_a2e060fc5b4ee02a8ab1781dbfe485803}\index{s\_philo@{s\_philo}!r\_fork@{r\_fork}}
+\index{r\_fork@{r\_fork}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{r\_fork}{r\_fork}}
+{\footnotesize\ttfamily \label{structs__philo_a2e060fc5b4ee02a8ab1781dbfe485803} 
+pthread\+\_\+mutex\+\_\+t\texorpdfstring{$\ast$}{*} s\+\_\+philo\+::r\+\_\+fork}
+
+\Hypertarget{structs__philo_a3633341ac6b3243e5277d6b8d13b1d2e}\index{s\_philo@{s\_philo}!start@{start}}
+\index{start@{start}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \label{structs__philo_a3633341ac6b3243e5277d6b8d13b1d2e} 
+suseconds\+\_\+t s\+\_\+philo\+::start}
+
+\Hypertarget{structs__philo_a92ae86dd86fe0c6be01346d96514d4b3}\index{s\_philo@{s\_philo}!t\_id@{t\_id}}
+\index{t\_id@{t\_id}!s\_philo@{s\_philo}}
+\doxysubsubsection{\texorpdfstring{t\_id}{t\_id}}
+{\footnotesize\ttfamily \label{structs__philo_a92ae86dd86fe0c6be01346d96514d4b3} 
+pthread\+\_\+t s\+\_\+philo\+::t\+\_\+id}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+philo/includes/\mbox{\hyperlink{philo_8h}{philo.\+h}}\end{DoxyCompactItemize}

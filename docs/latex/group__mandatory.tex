@@ -1,0 +1,618 @@
+\doxysection{Mandatory}
+\hypertarget{group__mandatory}{}\label{group__mandatory}\index{Mandatory@{Mandatory}}
+\doxysubsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{philo_8h}{philo.\+h}}
+\begin{DoxyCompactList}\small\item\em Philosophers Header. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{handler_8c}{handler.\+c}}
+\begin{DoxyCompactList}\small\item\em Function to handle the prints. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{init__args_8c}{init\+\_\+args.\+c}}
+\begin{DoxyCompactList}\small\item\em Initiate the struct args with value from argv. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{init__forks_8c}{init\+\_\+forks.\+c}}
+\begin{DoxyCompactList}\small\item\em Initialize the forks. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{init__philo_8c}{init\+\_\+philo.\+c}}
+\begin{DoxyCompactList}\small\item\em Initialize the philosophers. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{loop_8c}{loop.\+c}}
+\begin{DoxyCompactList}\small\item\em Core of the program. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{main_8c}{main.\+c}}
+\begin{DoxyCompactList}\small\item\em Main of the program. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{start_8c}{start.\+c}}
+\begin{DoxyCompactList}\small\item\em Start of the thread cycle. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{dead_8c}{dead.\+c}}
+\begin{DoxyCompactList}\small\item\em Handles errors and frees structs. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{forks_8c}{forks.\+c}}
+\begin{DoxyCompactList}\small\item\em Forks functions. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{philo__val_8c}{philo\+\_\+val.\+c}}
+\begin{DoxyCompactList}\small\item\em Eating related functions. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{valid__args_8c}{valid\+\_\+args.\+c}}
+\begin{DoxyCompactList}\small\item\em Validate arguments. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs__args}{s\+\_\+args}}
+\begin{DoxyCompactList}\small\item\em Struct of arguments. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structs__philo}{s\+\_\+philo}}
+\begin{DoxyCompactList}\small\item\em Philosophers Struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gad4b275dfea6ea4f4a4f088b4b1b4008f}{WRONG\+\_\+\+ARG}}~"{}Invalid Arguments"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga38df2209b5743705970943dfd46ee11d}{MTX\+\_\+\+ERROR}}~"{}Mutex Error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga288833146bf51c8b2e1c9288b26f7202}{MLC\+\_\+\+ERROR}}~"{}Malloc Error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gaf7370d9542e6df01dc43ea3ccf173631}{THR\+\_\+\+ERROR}}~"{}Thread error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga6a4c63572a9f37ef94dcec18e40157b3}{THR\+\_\+\+JOIN}}~"{}Thread join error"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga93182e924cb059b7c3639d5bf3b12c9e}{FORK}}~"{}has taken the fork\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga168db05df29f4ea8393be04e6168e236}{EAT}}~"{}is eating\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga44e89d523436fcbbf2c56e4fb335d509}{SLEEP}}~"{}is sleeping\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gab3fd8705bf275fd3f080dc354056ff3b}{THINK}}~"{}is thinking\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga75f9d93fb4725616678f9fee65f44f50}{DEATH}}~"{}died\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_ga941a506727ea6a3c5a9687dad74ee100}{DEFORK}}~"{}has released the fork\textbackslash{}n"{}
+\item 
+\#define \mbox{\hyperlink{group__mandatory_gad72dbcf6d0153db1b8d8a58001feed83}{DEBUG}}~false
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structs__args}{s\+\_\+args}} \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}}
+\begin{DoxyCompactList}\small\item\em Struct of arguments. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structs__philo}{s\+\_\+philo}} \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}}
+\begin{DoxyCompactList}\small\item\em Philosophers Struct. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__mandatory_ga8e1df43327c1132d2c8bf6afa4e48a82}{valid\+\_\+args}} (int ac, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}av)
+\begin{DoxyCompactList}\small\item\em Validates arguments. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_ga105820adca68804c4df1b8989d812ded}{init\+\_\+args}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}av)
+\begin{DoxyCompactList}\small\item\em Main function to initialize arguments. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_ga9fb398b14cf8d08b053bbd77ee7dfc7f}{start}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}fork, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Starts the threads. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_gadbe736fc8495420ed46113b5b29799b0}{is\+\_\+philo\+\_\+dead}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, int \texorpdfstring{$\ast$}{*}philo\+\_\+fed)
+\begin{DoxyCompactList}\small\item\em Checks if philo is dead. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga6e3524a78002ecc721e4bfc2fd3f87ff}{pick\+\_\+forks}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Pick up the forks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gabdb4a71338e67e0b044554de32baf2ff}{lay\+\_\+forks}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Lay down forks. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga8d668d2b57af1948ac8af0b63e0786d3}{handler}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, char \texorpdfstring{$\ast$}{*}event)
+\begin{DoxyCompactList}\small\item\em Handles the printing of the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga777b77c13b750a325943cb4c3bd2fecc}{all\+\_\+fed}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Prints message that all philo are done eating. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_gab358597df77415f9aaa2d8e35096d683}{loop}} (void \texorpdfstring{$\ast$}{*}\+\_\+philo)
+\begin{DoxyCompactList}\small\item\em Main loop of the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gaa146848b68cc8a8387b90ece584b7c30}{free\+\_\+all}} (pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks, \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Free everything. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga8b69de8d014eeffdfadc9cfe281ade0c}{dead}} (pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks, \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, char \texorpdfstring{$\ast$}{*}error)
+\begin{DoxyCompactList}\small\item\em Function to end the program. \end{DoxyCompactList}\item 
+pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_ga7ee147accbe8af4b7e4b9f2dabc1f22d}{init\+\_\+forks}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Initialize each fork. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group__mandatory_ga7713bac112dff0a18a9c764d665c33b8}{init\+\_\+philos}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks)
+\begin{DoxyCompactList}\small\item\em Initialize philos. \end{DoxyCompactList}\item 
+suseconds\+\_\+t \mbox{\hyperlink{group__mandatory_gaeae305baf30d1299001512462e4e8d5e}{get\+\_\+time}} (void)
+\begin{DoxyCompactList}\small\item\em Get the time object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_ga86c8199a7716c364621e49f9e87ef2d5}{ft\+\_\+atoi}} (char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Convert string to int. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gacc14ac78af242ca686addf5dd8e3e128}{free\+\_\+forks}} (pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}forks, int end)
+\begin{DoxyCompactList}\small\item\em Free forks mutex. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_ga15a564d4f9ce68483c670403e9672c88}{eat}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Function to make each philo eat. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_ga0c99d968a34e803d378692bde2e3f18f}{main}} (int ac, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}av)
+\begin{DoxyCompactList}\small\item\em Main of the program. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gae134699e346cc94c122b56dd07e2e804}{checker}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Checks if the program must end. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__mandatory_ga7a9fe4f1210008b95e1b118945eb31ba}{ft\+\_\+strlen}} (char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Get the length of string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{group__mandatory_ga75f9d93fb4725616678f9fee65f44f50}\index{Mandatory@{Mandatory}!DEATH@{DEATH}}
+\index{DEATH@{DEATH}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{DEATH}{DEATH}}
+{\footnotesize\ttfamily \label{group__mandatory_ga75f9d93fb4725616678f9fee65f44f50} 
+\#define DEATH~"{}died\textbackslash{}n"{}}
+
+\Hypertarget{group__mandatory_gad72dbcf6d0153db1b8d8a58001feed83}\index{Mandatory@{Mandatory}!DEBUG@{DEBUG}}
+\index{DEBUG@{DEBUG}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{DEBUG}{DEBUG}}
+{\footnotesize\ttfamily \label{group__mandatory_gad72dbcf6d0153db1b8d8a58001feed83} 
+\#define DEBUG~false}
+
+\Hypertarget{group__mandatory_ga941a506727ea6a3c5a9687dad74ee100}\index{Mandatory@{Mandatory}!DEFORK@{DEFORK}}
+\index{DEFORK@{DEFORK}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{DEFORK}{DEFORK}}
+{\footnotesize\ttfamily \label{group__mandatory_ga941a506727ea6a3c5a9687dad74ee100} 
+\#define DEFORK~"{}has released the fork\textbackslash{}n"{}}
+
+\Hypertarget{group__mandatory_ga168db05df29f4ea8393be04e6168e236}\index{Mandatory@{Mandatory}!EAT@{EAT}}
+\index{EAT@{EAT}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{EAT}{EAT}}
+{\footnotesize\ttfamily \label{group__mandatory_ga168db05df29f4ea8393be04e6168e236} 
+\#define EAT~"{}is eating\textbackslash{}n"{}}
+
+\Hypertarget{group__mandatory_ga93182e924cb059b7c3639d5bf3b12c9e}\index{Mandatory@{Mandatory}!FORK@{FORK}}
+\index{FORK@{FORK}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{FORK}{FORK}}
+{\footnotesize\ttfamily \label{group__mandatory_ga93182e924cb059b7c3639d5bf3b12c9e} 
+\#define FORK~"{}has taken the fork\textbackslash{}n"{}}
+
+\Hypertarget{group__mandatory_ga288833146bf51c8b2e1c9288b26f7202}\index{Mandatory@{Mandatory}!MLC\_ERROR@{MLC\_ERROR}}
+\index{MLC\_ERROR@{MLC\_ERROR}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{MLC\_ERROR}{MLC\_ERROR}}
+{\footnotesize\ttfamily \label{group__mandatory_ga288833146bf51c8b2e1c9288b26f7202} 
+\#define MLC\+\_\+\+ERROR~"{}Malloc Error"{}}
+
+\Hypertarget{group__mandatory_ga38df2209b5743705970943dfd46ee11d}\index{Mandatory@{Mandatory}!MTX\_ERROR@{MTX\_ERROR}}
+\index{MTX\_ERROR@{MTX\_ERROR}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{MTX\_ERROR}{MTX\_ERROR}}
+{\footnotesize\ttfamily \label{group__mandatory_ga38df2209b5743705970943dfd46ee11d} 
+\#define MTX\+\_\+\+ERROR~"{}Mutex Error"{}}
+
+\Hypertarget{group__mandatory_ga44e89d523436fcbbf2c56e4fb335d509}\index{Mandatory@{Mandatory}!SLEEP@{SLEEP}}
+\index{SLEEP@{SLEEP}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{SLEEP}{SLEEP}}
+{\footnotesize\ttfamily \label{group__mandatory_ga44e89d523436fcbbf2c56e4fb335d509} 
+\#define SLEEP~"{}is sleeping\textbackslash{}n"{}}
+
+\Hypertarget{group__mandatory_gab3fd8705bf275fd3f080dc354056ff3b}\index{Mandatory@{Mandatory}!THINK@{THINK}}
+\index{THINK@{THINK}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{THINK}{THINK}}
+{\footnotesize\ttfamily \label{group__mandatory_gab3fd8705bf275fd3f080dc354056ff3b} 
+\#define THINK~"{}is thinking\textbackslash{}n"{}}
+
+\Hypertarget{group__mandatory_gaf7370d9542e6df01dc43ea3ccf173631}\index{Mandatory@{Mandatory}!THR\_ERROR@{THR\_ERROR}}
+\index{THR\_ERROR@{THR\_ERROR}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{THR\_ERROR}{THR\_ERROR}}
+{\footnotesize\ttfamily \label{group__mandatory_gaf7370d9542e6df01dc43ea3ccf173631} 
+\#define THR\+\_\+\+ERROR~"{}Thread error"{}}
+
+\Hypertarget{group__mandatory_ga6a4c63572a9f37ef94dcec18e40157b3}\index{Mandatory@{Mandatory}!THR\_JOIN@{THR\_JOIN}}
+\index{THR\_JOIN@{THR\_JOIN}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{THR\_JOIN}{THR\_JOIN}}
+{\footnotesize\ttfamily \label{group__mandatory_ga6a4c63572a9f37ef94dcec18e40157b3} 
+\#define THR\+\_\+\+JOIN~"{}Thread join error"{}}
+
+\Hypertarget{group__mandatory_gad4b275dfea6ea4f4a4f088b4b1b4008f}\index{Mandatory@{Mandatory}!WRONG\_ARG@{WRONG\_ARG}}
+\index{WRONG\_ARG@{WRONG\_ARG}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{WRONG\_ARG}{WRONG\_ARG}}
+{\footnotesize\ttfamily \label{group__mandatory_gad4b275dfea6ea4f4a4f088b4b1b4008f} 
+\#define WRONG\+\_\+\+ARG~"{}Invalid Arguments"{}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}\index{Mandatory@{Mandatory}!t\_args@{t\_args}}
+\index{t\_args@{t\_args}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{t\_args}{t\_args}}
+{\footnotesize\ttfamily \label{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc} 
+typedef struct \mbox{\hyperlink{structs__args}{s\+\_\+args}} \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}}}
+
+
+
+Struct of arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nbr\+\_\+philo} & Number of philosophers \\
+\hline
+{\em time\+\_\+to\+\_\+die} & Time for a philo to die \\
+\hline
+{\em time\+\_\+to\+\_\+eat} & Time for a philo to eat \\
+\hline
+{\em time\+\_\+to\+\_\+sleep} & Time for a philo to sleep \\
+\hline
+{\em eat\+\_\+time} & Times that a philo has to eat \\
+\hline
+{\em mutex} & Mutex to lock the struct \\
+\hline
+{\em end} & Variable to check if the program must end \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}\index{Mandatory@{Mandatory}!t\_philo@{t\_philo}}
+\index{t\_philo@{t\_philo}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{t\_philo}{t\_philo}}
+{\footnotesize\ttfamily \label{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d} 
+typedef struct \mbox{\hyperlink{structs__philo}{s\+\_\+philo}} \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}}}
+
+
+
+Philosophers Struct. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nbr\+\_\+philo} & Number of the philo \\
+\hline
+{\em num\+\_\+eat} & Number of meals eated by philo \\
+\hline
+{\em start} & Start time of each philo \\
+\hline
+{\em last\+\_\+meal} & Last time a philo has eaten \\
+\hline
+{\em l\+\_\+fork} & Left Fork Mutex \\
+\hline
+{\em r\+\_\+fork} & Right Fork Mutex \\
+\hline
+{\em t\+\_\+id} & Thread Id of Philo \\
+\hline
+{\em args} & Struct of args \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{group__mandatory_ga777b77c13b750a325943cb4c3bd2fecc}\index{Mandatory@{Mandatory}!all\_fed@{all\_fed}}
+\index{all\_fed@{all\_fed}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{all\_fed()}{all\_fed()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga777b77c13b750a325943cb4c3bd2fecc} 
+void all\+\_\+fed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
+
+
+
+Prints message that all philo are done eating. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Args Struct \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_gae134699e346cc94c122b56dd07e2e804}\index{Mandatory@{Mandatory}!checker@{checker}}
+\index{checker@{checker}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{checker()}{checker()}}
+{\footnotesize\ttfamily \label{group__mandatory_gae134699e346cc94c122b56dd07e2e804} 
+void checker (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the program must end. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em philo} & Philo Struct \\
+\hline
+{\em args} & Args Struct \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga8b69de8d014eeffdfadc9cfe281ade0c}\index{Mandatory@{Mandatory}!dead@{dead}}
+\index{dead@{dead}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{dead()}{dead()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga8b69de8d014eeffdfadc9cfe281ade0c} 
+void dead (\begin{DoxyParamCaption}\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{forks}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{error}{}\end{DoxyParamCaption})}
+
+
+
+Function to end the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forks} & Forks Mutex \\
+\hline
+{\em args} & Args Struct \\
+\hline
+{\em philo} & Philo Struct \\
+\hline
+{\em error} & Type of error \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga15a564d4f9ce68483c670403e9672c88}\index{Mandatory@{Mandatory}!eat@{eat}}
+\index{eat@{eat}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{eat()}{eat()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga15a564d4f9ce68483c670403e9672c88} 
+void eat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{}\end{DoxyParamCaption})}
+
+
+
+Function to make each philo eat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em philo} & Philo Struct \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_gaa146848b68cc8a8387b90ece584b7c30}\index{Mandatory@{Mandatory}!free\_all@{free\_all}}
+\index{free\_all@{free\_all}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{free\_all()}{free\_all()}}
+{\footnotesize\ttfamily \label{group__mandatory_gaa146848b68cc8a8387b90ece584b7c30} 
+void free\+\_\+all (\begin{DoxyParamCaption}\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{forks}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{}\end{DoxyParamCaption})}
+
+
+
+Free everything. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forks} & Forks mutex \\
+\hline
+{\em args} & Args struct \\
+\hline
+{\em philo} & Philo struct \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_gacc14ac78af242ca686addf5dd8e3e128}\index{Mandatory@{Mandatory}!free\_forks@{free\_forks}}
+\index{free\_forks@{free\_forks}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{free\_forks()}{free\_forks()}}
+{\footnotesize\ttfamily \label{group__mandatory_gacc14ac78af242ca686addf5dd8e3e128} 
+void free\+\_\+forks (\begin{DoxyParamCaption}\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{forks}{, }\item[{int}]{end}{}\end{DoxyParamCaption})}
+
+
+
+Free forks mutex. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em forks} & Forks to be freed \\
+\hline
+{\em end} & Num of philo \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga86c8199a7716c364621e49f9e87ef2d5}\index{Mandatory@{Mandatory}!ft\_atoi@{ft\_atoi}}
+\index{ft\_atoi@{ft\_atoi}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{ft\_atoi()}{ft\_atoi()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga86c8199a7716c364621e49f9e87ef2d5} 
+int ft\+\_\+atoi (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Convert string to int. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String to be converted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Number converted 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_ga7a9fe4f1210008b95e1b118945eb31ba}\index{Mandatory@{Mandatory}!ft\_strlen@{ft\_strlen}}
+\index{ft\_strlen@{ft\_strlen}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{ft\_strlen()}{ft\_strlen()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga7a9fe4f1210008b95e1b118945eb31ba} 
+int ft\+\_\+strlen (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Get the length of string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & String \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Length of string 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_gaeae305baf30d1299001512462e4e8d5e}\index{Mandatory@{Mandatory}!get\_time@{get\_time}}
+\index{get\_time@{get\_time}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{get\_time()}{get\_time()}}
+{\footnotesize\ttfamily \label{group__mandatory_gaeae305baf30d1299001512462e4e8d5e} 
+suseconds\+\_\+t get\+\_\+time (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Get the time object. 
+
+\begin{DoxyReturn}{Returns}
+suseconds\+\_\+t Time in miliseconds 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_ga8d668d2b57af1948ac8af0b63e0786d3}\index{Mandatory@{Mandatory}!handler@{handler}}
+\index{handler@{handler}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{handler()}{handler()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga8d668d2b57af1948ac8af0b63e0786d3} 
+void handler (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Handles the printing of the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em philo} & Philo struct \\
+\hline
+{\em event} & Type of event \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga105820adca68804c4df1b8989d812ded}\index{Mandatory@{Mandatory}!init\_args@{init\_args}}
+\index{init\_args@{init\_args}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{init\_args()}{init\_args()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga105820adca68804c4df1b8989d812ded} 
+bool init\+\_\+args (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{av}{}\end{DoxyParamCaption})}
+
+
+
+Main function to initialize arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Struct of the arguments \\
+\hline
+{\em av} & Matrix of the arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Arguments are correct 
+
+false Wrong Arguments 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_ga7ee147accbe8af4b7e4b9f2dabc1f22d}\index{Mandatory@{Mandatory}!init\_forks@{init\_forks}}
+\index{init\_forks@{init\_forks}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{init\_forks()}{init\_forks()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga7ee147accbe8af4b7e4b9f2dabc1f22d} 
+pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*} init\+\_\+forks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{}\end{DoxyParamCaption})}
+
+
+
+Initialize each fork. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Args Struct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pthread\+\_\+mutex\+\_\+t\texorpdfstring{$\ast$}{*} Initialized forks 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_ga7713bac112dff0a18a9c764d665c33b8}\index{Mandatory@{Mandatory}!init\_philos@{init\_philos}}
+\index{init\_philos@{init\_philos}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{init\_philos()}{init\_philos()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga7713bac112dff0a18a9c764d665c33b8} 
+\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*} init\+\_\+philos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{forks}{}\end{DoxyParamCaption})}
+
+
+
+Initialize philos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Struct of the arguments \\
+\hline
+{\em forks} & Philo Forks \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+t\+\_\+philo\texorpdfstring{$\ast$}{*} Philo struct initialized 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_gadbe736fc8495420ed46113b5b29799b0}\index{Mandatory@{Mandatory}!is\_philo\_dead@{is\_philo\_dead}}
+\index{is\_philo\_dead@{is\_philo\_dead}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{is\_philo\_dead()}{is\_philo\_dead()}}
+{\footnotesize\ttfamily \label{group__mandatory_gadbe736fc8495420ed46113b5b29799b0} 
+bool is\+\_\+philo\+\_\+dead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{philo\+\_\+fed}{}\end{DoxyParamCaption})}
+
+
+
+Checks if philo is dead. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Args Struct \\
+\hline
+{\em philo} & Philo Struct \\
+\hline
+{\em philo\+\_\+fed} & Philo is fed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Dead 
+
+false Not Dead 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_gabdb4a71338e67e0b044554de32baf2ff}\index{Mandatory@{Mandatory}!lay\_forks@{lay\_forks}}
+\index{lay\_forks@{lay\_forks}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{lay\_forks()}{lay\_forks()}}
+{\footnotesize\ttfamily \label{group__mandatory_gabdb4a71338e67e0b044554de32baf2ff} 
+void lay\+\_\+forks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{}\end{DoxyParamCaption})}
+
+
+
+Lay down forks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em philo} & Philo fork \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_gab358597df77415f9aaa2d8e35096d683}\index{Mandatory@{Mandatory}!loop@{loop}}
+\index{loop@{loop}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{loop()}{loop()}}
+{\footnotesize\ttfamily \label{group__mandatory_gab358597df77415f9aaa2d8e35096d683} 
+void \texorpdfstring{$\ast$}{*} loop (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+philo}{}\end{DoxyParamCaption})}
+
+
+
+Main loop of the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+philo} & Pointer to philo struct \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga0c99d968a34e803d378692bde2e3f18f}\index{Mandatory@{Mandatory}!main@{main}}
+\index{main@{main}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga0c99d968a34e803d378692bde2e3f18f} 
+int main (\begin{DoxyParamCaption}\item[{int}]{ac}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{av}{}\end{DoxyParamCaption})}
+
+
+
+Main of the program. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ac} & Number of arguments \\
+\hline
+{\em av} & Strings of each arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Normal exit conditions 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_ga6e3524a78002ecc721e4bfc2fd3f87ff}\index{Mandatory@{Mandatory}!pick\_forks@{pick\_forks}}
+\index{pick\_forks@{pick\_forks}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{pick\_forks()}{pick\_forks()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga6e3524a78002ecc721e4bfc2fd3f87ff} 
+void pick\+\_\+forks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{}\end{DoxyParamCaption})}
+
+
+
+Pick up the forks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em philo} & Philo fork \\
+\hline
+\end{DoxyParams}
+\Hypertarget{group__mandatory_ga9fb398b14cf8d08b053bbd77ee7dfc7f}\index{Mandatory@{Mandatory}!start@{start}}
+\index{start@{start}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga9fb398b14cf8d08b053bbd77ee7dfc7f} 
+bool start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}}]{args}{, }\item[{pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}}]{fork}{, }\item[{\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}}]{philo}{}\end{DoxyParamCaption})}
+
+
+
+Starts the threads. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em args} & Args Struct \\
+\hline
+{\em fork} & Forks Struct \\
+\hline
+{\em philo} & Philo Structs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true End 
+
+false Not End 
+\end{DoxyReturn}
+\Hypertarget{group__mandatory_ga8e1df43327c1132d2c8bf6afa4e48a82}\index{Mandatory@{Mandatory}!valid\_args@{valid\_args}}
+\index{valid\_args@{valid\_args}!Mandatory@{Mandatory}}
+\doxysubsubsection{\texorpdfstring{valid\_args()}{valid\_args()}}
+{\footnotesize\ttfamily \label{group__mandatory_ga8e1df43327c1132d2c8bf6afa4e48a82} 
+bool valid\+\_\+args (\begin{DoxyParamCaption}\item[{int}]{ac}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{av}{}\end{DoxyParamCaption})}
+
+
+
+Validates arguments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ac} & Number of arguments \\
+\hline
+{\em av} & String for each argument \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true All valid 
+
+false Not all valid 
+\end{DoxyReturn}

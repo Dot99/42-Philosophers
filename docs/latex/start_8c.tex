@@ -1,0 +1,22 @@
+\doxysection{philo/src/start.c File Reference}
+\hypertarget{start_8c}{}\label{start_8c}\index{philo/src/start.c@{philo/src/start.c}}
+
+
+Start of the thread cycle.  
+
+
+{\ttfamily \#include "{}philo.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+suseconds\+\_\+t \mbox{\hyperlink{group__mandatory_gaeae305baf30d1299001512462e4e8d5e}{get\+\_\+time}} (void)
+\begin{DoxyCompactList}\small\item\em Get the time object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__mandatory_gae134699e346cc94c122b56dd07e2e804}{checker}} (\mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo, \mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args)
+\begin{DoxyCompactList}\small\item\em Checks if the program must end. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__mandatory_ga9fb398b14cf8d08b053bbd77ee7dfc7f}{start}} (\mbox{\hyperlink{group__mandatory_ga7a2c62b5ef76982749b496f807c044bc}{t\+\_\+args}} \texorpdfstring{$\ast$}{*}args, pthread\+\_\+mutex\+\_\+t \texorpdfstring{$\ast$}{*}fork, \mbox{\hyperlink{group__mandatory_ga7b20ce4f97b6f0dc2e44a50c149be74d}{t\+\_\+philo}} \texorpdfstring{$\ast$}{*}philo)
+\begin{DoxyCompactList}\small\item\em Starts the threads. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Start of the thread cycle. 
+
