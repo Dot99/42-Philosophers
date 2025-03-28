@@ -5,7 +5,6 @@
 <div align="center">
 	<h1>Description</h1>
 	<p>The mandatory part of this project asks us to solve the <a href="https://en.wikipedia.org/wiki/Dining_philosophers_problem">Dining philosophers problem</a> by implementing a multi-threading solution</a></p>
-	<h1><a href="subject.pdf">Subject</a><h2>
 </div>
 
 <div align="center">
